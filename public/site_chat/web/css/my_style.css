@@ -1,0 +1,106 @@
+/* the magic is on line 66 */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+.scroll{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 70%;
+  height:70%;
+  overflow-y: auto;
+}
+.container{
+  width: 70%;
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.message{
+  flex: 0 0 100%;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0 40px 0px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.message.blank{
+  height: 20px;
+}
+
+.message span{
+  text-align: left;
+  display: inline-block;
+  background: #f1f0f0;
+  color: #000;
+  margin: 1px 0;
+  padding: 6px 12px;
+  border-radius: 4px 20.8px 20.8px 4px;
+  border-radius: 20.8px;
+  max-width: calc(100wh - 80px);
+}
+
+.message.me{
+  text-align: right;
+  padding: 0 0 0 40px;
+}
+.message.me span{
+  color: #fff;
+  /* The great trick is in these lines. */
+  background-image: linear-gradient( 180deg, #EE9AE5 10%, #5961F9 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  /*   you can also use images. Try to uncomment this line: */
+  /*    background-image: url('https://i.pinimg.com/originals/db/b9/32/dbb932daf7e82c07cceff15742b1e196.jpg'); color: #000; */
+}
+/* only border-radius settings */
+.message.start span{
+  border-radius: 20.8px 20.8px 20.8px 4px;
+}
+.message.mid span{
+  border-radius: 4px 20.8px 20.8px 4px;
+}
+.message.end span{
+  border-radius: 4px 20.8px 20.8px 20.8px;
+}
+
+.message.me.start span{
+  border-radius: 20.8px 20.8px 4px 20.8px;
+}
+.message.me.mid span{
+  border-radius: 20.8px 4px 4px 20.8px;
+}
+.message.me.end span{
+  border-radius: 20.8px 4px 20.8px 20.8px;
+}
+form{
+  width: 50%;
+  height:50%;
+  position: absolute;
+  bottom: -300px;
+  right: 500px;
+}
+img{
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  right: 0px;
+  bottom: 700px;
+}
